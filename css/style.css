@@ -6,6 +6,93 @@ body {
   letter-spacing: 0.1em;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin: 0;
+  width: 100%;
+}
+
+.header-icon p{
+  left: 70px;
+  top:8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.header-icon img{
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 48px;
+  top: 12px;
+  left: 12px;
+  cursor: pointer;
+}
+
+.drawer_hidden {
+  display: none;
+}
+
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.drawer_open img {
+  width: 44px;
+  border-radius: 5px;
+  border: 1px solid #111;
+}
+
+.nav {
+  background-color: #FDF2EB;
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+
+.nav_content {
+  width: 100%;
+  position: fixed;
+  top: -200px;
+  z-index: -1;
+  background: #FDF2EB;
+  transition: 0.5s;
+  text-align: center;
+}
+.nav_content li{
+  padding-bottom: 30px;
+}
+
+.nav_item a {
+  color: #000111;
+  margin: 0;
+  padding: 0;
+}
+
+/* #drawer_input:checked ~ .nav_content {
+  top: 70px;
+} */
+
+/* JavaScript押されたら付与 */
+.nav_checked{
+  top: 70px;
+}
+
 .container {
   width: 92%;
   margin-right: auto;
@@ -25,18 +112,33 @@ h2 {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 42px;
+  }
+}
+
 .flex-box {
   display: flex;
 }
 
-.comment{
+.comment {
   padding: 0 10px;
+  max-width: 600px;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .font-18 {
+    font-size: 18px;
+  }
 }
 
 .hero {
   position: relative;
   background: url('../images/app1.jpg') center/cover;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 100px 0;
   margin-top: 70px;
@@ -56,20 +158,58 @@ h2 {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .hero-container p {
+    font-size: 24px;
+  }
+}
+
+.about {
+  background-color: #fafafa;
+}
+
 .about-link {
   padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.about-link div:last-of-type {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-link div {
+    margin-top: 32px;
+  }
+}
+
+.about-link-container {
+  justify-content: center;
 }
 
 .about-link-container a {
   letter-spacing: 0;
-  padding-left: 10px;
   color: #472da6;
+  width: 240px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-link-container a {
+    width: 400px;
+  }
 }
 
 .about-link-container p {
   letter-spacing: 0;
-  padding-left: 20px;
-  width: 72px;
+  width: 60px;
+}
+@media screen and (min-width: 768px) {
+  .about-link-container p {
+    width: 120px;
+  }
 }
 
 .about-img-container {
@@ -85,10 +225,31 @@ h2 {
   border-radius: 10px;
 }
 
+.comment-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
 .apps {
-  background-color: #fafafa;
+  background-color: #ffffff;
   text-align: center;
   padding-bottom: 18px;
+}
+
+.apps-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 1110px) {
+  .apps-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .apps-container-item img {
@@ -97,43 +258,68 @@ h2 {
   border-radius: 10px;
 }
 
-.apps-container-item{
+.apps-container-item {
   font-size: 18px;
   line-height: 2;
-  margin: 30px 0;
+  margin: 20px 0;
+  max-width: 400px;
+  min-width: 350px;
 }
 
-.apps-container-item:first-child{
-margin-top: 0;
+@media screen and (min-width: 768px) {
+  .apps-container-item {
+    margin: 30px 50px;
+  }
 }
 
-.skill{
+.apps-container-item:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .apps-container-item:first-child {
+    margin-top: 30px;
+  }
+}
+
+.skill {
   text-align: center;
   font-size: 18px;
   padding-bottom: 18px;
+  background-color: #fafafa;
 }
 
-.profile{
-  background-color: #fafafa;
+@media screen and (min-width: 768px) {
+  .skill {
+    font-size: 24px;
+  }
+}
+
+.profile {
+  background-color: #ffffff;
   padding-bottom: 18px;
 }
 
-.profile p{
+.profile p {
   padding: 10px;
 }
 
-.profile p:first-of-type{
+.profile p:first-of-type {
   padding-top: 0;
 }
 
-.profile p:last-of-type{
+.profile p:last-of-type {
   padding-bottom: 0;
 }
 
-.footer{
+.contact {
+  background-color: #fafafa;
+}
+
+.footer {
   text-align: center;
   padding: 16px 0;
-  background: #4D2773;
+  background: #4d2773;
 }
 .footer-copyright {
   color: #fff;
