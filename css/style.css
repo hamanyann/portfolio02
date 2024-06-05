@@ -6,6 +6,8 @@ body {
   letter-spacing: 0.1em;
 }
 
+html { scroll-behavior: smooth;}
+
 .header {
   display: flex;
   justify-content: center;
