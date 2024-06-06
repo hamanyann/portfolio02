@@ -33,7 +33,7 @@
           ><img src="/images/menu.png" alt="nav"
         /></label>
         <a href="index.html" class="header-icon">
-          <img src="/images/prof.jpg" alt="prof">
+          <img src="/images/prof.jpg" alt="prof" />
           <p>hama-PortFolio</p>
         </a>
         <nav class="nav_content">
@@ -89,24 +89,92 @@
             <img src="images/app2.jpg" alt="ポートフォリオサイト" />
             <p>ポートフォリオサイト</p>
           </div> -->
-          <a href="https://soft-rolypoly-61609f.netlify.app" class="apps-container-item">
-            <img src="images/app1.jpg" alt="電卓" />
-            <p>電卓</p>
-          </a>
-          <a href="https://luminous-scone-d676ec.netlify.app" class="apps-container-item">
-            <img src="images/app3.jpg" alt="カウントアプリ" />
-            <p>カウントアプリ</p>
-          </a>
-          <a href="https://rainbow-pegasus-e56c30.netlify.app" class="apps-container-item">
-            <img src="images/app4.jpg" alt="数字当てゲーム" />
-            <p>数字当てゲーム</p>
-          </a>
+
           <div class="apps-container-item">
-            <img src="images//app404.jpg" alt="制作中" />
+            <a
+              href="https://soft-rolypoly-61609f.netlify.app"
+              class="clickable-image"
+              ><img src="images/app1.jpg" alt="電卓"
+            /></a>
+            <p>電卓</p>
+            <p class="description-language">2024/05&nbsp;&nbsp;JavaScript/bootstrap</p>
+            <p class="description">
+              始めて作成したアプリ。意外と簡単なので初心者におすすめ。小数点や四則演算が次々と実装出来たのに感動した。
+            </p>
+            <p class="description-git">
+              https://github.com/hamanyann/calculater
+            </p>
+          </div>
+
+          <div class="apps-container-item">
+            <a
+              href="https://luminous-scone-d676ec.netlify.app"
+              class="clickable-image"
+              ><img src="images/app3.jpg" alt="カウントアプリ"
+            /></a>
+            <p>カウントアプリ</p>
+            <p class="description-language">2024/05&nbsp;&nbsp;JavaScript/bootstrap</p>
+            <p class="description">
+              ナベアツっぽいアプリにしようと思って作りました。2の倍数では踊りません。
+            </p>
+            <p class="description-git">
+              https://github.com/hamanyann/count-up2
+            </p>
+          </div>
+
+          <div class="apps-container-item">
+            <a
+              href="https://rainbow-pegasus-e56c30.netlify.app"
+              class="clickable-image"
+              ><img src="images/app4.jpg" alt="数字当てゲーム"
+            /></a>
+            <p>数字当てゲーム</p>
+            <p class="description-language">2024/05&nbsp;&nbsp;JavaScript/bootstrap</p>
+            <p class="description">正解すると美少女AIの表情に変化が・・・？</p>
+            <p class="description-git">https://github.com/hamanyann/num</p>
+          </div>
+
+          <div class="apps-container-item">
+            <a href="index.html" class="clickable-image"
+              ><img src="images/port.jpg" alt="ポートフォリオサイト"
+            /></a>
+            <p>ポートフォリオサイト</p>
+            <p class="description-language">2024/06&nbsp;&nbsp;JavaScript</p>
+            <p class="description">
+              Vanilla JSにこだわりました。ハンバーガーメニュー、モーダルを実装。
+            </p>
+            <p class="description-git">
+              https://github.com/hamanyann/portfolio02
+            </p>
+          </div>
+
+          <div class="apps-container-item">
+            <img
+              src="images//app404.jpg"
+              class="clickable-image"
+              alt="制作中"
+            />
             <p>制作中</p>
           </div>
         </div>
       </section>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h3></h3>
+        <a href=""><img class="original-box-shadow" /></a>
+        <div></div>
+        <p></p>
+        <div class="modal-btn-wrapper">
+          <button class="modal-btn" id="modal-btn-app" onclick="">
+            <img src="/images/link.png" alt="web" />WEBアプリを開く
+          </button>
+          <button class="modal-btn" id="modal-btn-git" onclick="">
+            <img src="/images/github.png" alt="web" />Githubへ
+          </button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
 
       <section class="section skill" id="skill">
         <h2>Skill</h2>
@@ -114,8 +182,7 @@
           <p>html/css</p>
           <p>JavaScript</p>
           <p>Bootstrap</p>
-          <p>and more...（予定）
-          </p>
+          <p>and more...（予定）</p>
         </div>
       </section>
       <section class="profile font-18">

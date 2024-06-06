@@ -6,7 +6,9 @@ body {
   letter-spacing: 0.1em;
 }
 
-html { scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;
+}
 
 .header {
   display: flex;
@@ -96,7 +98,6 @@ html { scroll-behavior: smooth;}
   .nav_list {
     display: flex;
     justify-content: flex-end;
-
   }
 }
 
@@ -106,8 +107,8 @@ html { scroll-behavior: smooth;}
 
 @media screen and (min-width: 768px) {
   .nav_list li {
-   padding: 0 15px;
-   font-size: 14px;
+    padding: 0 15px;
+    font-size: 14px;
   }
 }
 
@@ -352,4 +353,87 @@ h2 {
 }
 .footer-copyright {
   color: #fff;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: 140px auto 0px;
+  width: 90%;
+  height: 70%;
+  max-width: 600px;
+  background-color: white;
+  padding: 40px 20px 20px 20px;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.modal img {
+  display: block;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.modal div {
+  margin: 20px 0;
+  
+}
+
+.modal h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-btn-wrapper {
+  display: flex;
+}
+
+.modal-btn {
+  display: flex;
+  margin: 20px 60px 0 0;
+}
+
+.modal-btn img {
+  max-width: 20px;
+  margin: 5px 5px 0 0;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 40px;
+  color: #111;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin: 0;
+}
+
+.description,
+.description-language,
+.description-git {
+  display: none;
+}
+
+.original-box-shadow {
+  box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 10px;
 }
