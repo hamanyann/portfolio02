@@ -279,7 +279,7 @@ h2 {
   .apps-container {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    
   }
 }
 
@@ -439,3 +439,4 @@ h2 {
   box-shadow: 0px 0px 15px -5px #777777;
   border-radius: 10px;
 }
+
